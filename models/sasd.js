@@ -6,41 +6,62 @@ const sasdSchema = new Schema({
   age: {
     type: Number
   },
-  gender: {
+  HEIGHT: {
+    type: Number
+  },
+  WEIGHT: {
+    type: Number
+  },
+  SEX: {
     type: String
   },
-  races: {
+  RACE: {
     type: String
   },
-  smoking_status: {
+  SMOKE: {
     type: Boolean
   },
   BMI: {
     type: Number
   },
-  HTN: {
+  HYPERMED: {
     type: Boolean
   },
   DIABETES: {
     type: Boolean
   },
-  CHF: {
+  HXCHF: {
     type: Boolean
   },
-  ASA_Class: {
+  ASACLAS: {
     type: String
   },
-  COPD: {
+  HXCOPD: {
     type: Boolean
   },
-  operative_time: {
+  OPTIME: {
     type: String
   },
-  INvsOutvsASC: {
+  INOUT: {
     type: String
   },
-  Outcomes: {
+  OTHBLEED: {
   	type: String
+  },
+  SUPINFEC: {
+    type: String
+  },
+  WNDINFD: {
+    type: String
+  },
+  DEHIS: {
+    type: String
+  },
+  RETURNOR: {
+    type: Boolean
+  },
+  READMISSION: {
+    type: String
   }
 });
 
