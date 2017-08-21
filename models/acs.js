@@ -3,7 +3,7 @@ var mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const acsSchema = new Schema({
-  age: {
+  Age: {
     type: Number
   },
   HEIGHT: {
