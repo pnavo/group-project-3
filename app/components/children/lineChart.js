@@ -31,7 +31,7 @@ class LineChart extends React.Component{
             }
           ],
           // your x accessor
-          x = function(d) {
+          var x = (d) => {
             return parseDate(d.month);
           },
           xScale = 'time';
