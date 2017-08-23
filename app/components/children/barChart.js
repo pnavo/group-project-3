@@ -28,7 +28,7 @@ class StatusChannelChart extends React.Component{
             name: 'Frequency'
           }
         ],
-        x = function(d) {
+        var x = (d) => {
           return d.letter;
         },
         xScale = 'ordinal',
