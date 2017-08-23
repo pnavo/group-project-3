@@ -7,7 +7,9 @@ var primaryObjective = ['overall','specific'];
 class Dropdowns extends React.Component {
 	constructor(props) {
 		super(props);
-		return { value: primaryObjective[0]};
+		this.state = {
+			value: primaryObjective[0]
+		}
 	}
 
 	render() {
@@ -15,7 +17,7 @@ class Dropdowns extends React.Component {
 			<DropdownList
 				data={primaryObjective}
 				value={this.state.value}
-				onChange={value => this.setState({ value})}/>)
+				onChange={value => this.setState({ value })}/>)
 	}
 }
 
