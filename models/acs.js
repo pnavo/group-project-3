@@ -3,64 +3,88 @@ var mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const acsSchema = new Schema({
-  Age: {
+  cpt: {
     type: Number
   },
-  HEIGHT: {
+  operyr: {
     type: Number
   },
-  WEIGHT: {
+  admqtr: {
     type: Number
   },
-  SEX: {
-    type: String
-  },
-  RACE: {
-    type: String
-  },
-  SMOKE: {
-    type: Boolean
-  },
-  BMI: {
+  age: {
     type: Number
   },
-  HYPERMED: {
+  height: {
+    type: Number
+  },
+  weight: {
+    type: Number
+  },
+  sex: {
     type: Boolean
   },
-  DIABETES: {
+  race_new: {
+    type: String
+  },
+  smoke: {
     type: Boolean
   },
-  HXCHF: {
+  bmi: {
+    type: Number
+  },
+  hypermed: {
     type: Boolean
   },
-  ASACLAS: {
-    type: String
-  },
-  HXCOPD: {
+  diabetes: {
     type: Boolean
   },
-  OPTIME: {
-    type: String
-  },
-  INOUT: {
-    type: String
-  },
-  OTHBLEED: {
-    type: String
-  },
-  SUPINFEC: {
-    type: String
-  },
-  WNDINFD: {
-    type: String
-  },
-  DEHIS: {
-    type: String
-  },
-  RETURNOR: {
+  hxchf: {
     type: Boolean
   },
-  READMISSION: {
+  hxcopd: {
+    type: Boolean
+  },
+  inout: {
+    type: String
+  },
+  optime: {
+    type: String
+  }
+  othbleed: {
+    type: String
+  },
+  supinfec: {
+    type: String
+  },
+  wndinf: {
+    type: String
+  },
+  dehis: {
+    type: String
+  },
+  asaclas: {
+    type: String
+  },
+  mortality: {
+    type: Boolean
+  },
+  mortprob: {
+    type: Number
+  },
+  morbprob: {
+    type: Number
+  },
+  anesthes: {
+    type: Number
+  },
+  returnor: {
+    type: Boolean
+  },
+  readmission: {
+    type: String
+  },
+  otherproc1: {
     type: String
   }
 });
