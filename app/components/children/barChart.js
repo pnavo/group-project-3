@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Chart} from 'react-d3-core';
 import {BarChart} from 'react-d3-basic';
 
-class StatusChannelChart extends React.Component{
+class BarChart extends React.Component{
     render() {
          var generalChartData = [
               {letter: "A", frequency: 0.08167},
@@ -53,4 +53,4 @@ class StatusChannelChart extends React.Component{
         }
     }
 
-export default StatusChannelChart;
+export default BarChart;

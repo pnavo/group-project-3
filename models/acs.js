@@ -22,52 +22,52 @@ const acsSchema = new Schema({
     type: Number
   },
   sex: {
-    type: Boolean
+    type: Number
   },
   race_new: {
     type: String
   },
   smoke: {
-    type: Boolean
+    type: Number
   },
   bmi: {
     type: Number
   },
   hypermed: {
-    type: Boolean
+    type: Number
   },
   diabetes: {
-    type: Boolean
+    type: Number
   },
   hxchf: {
-    type: Boolean
+    type: Number
   },
   hxcopd: {
-    type: Boolean
+    type: Number
   },
   inout: {
     type: String
   },
   optime: {
-    type: String
+    type: Number
   }
   othbleed: {
-    type: String
+    type: Number
   },
   supinfec: {
-    type: String
+    type: Number
   },
   wndinf: {
-    type: String
+    type: Number
   },
   dehis: {
-    type: String
+    type: Number
   },
   asaclas: {
-    type: String
+    type: Number
   },
   mortality: {
-    type: Boolean
+    type: Number
   },
   mortprob: {
     type: Number
@@ -79,10 +79,10 @@ const acsSchema = new Schema({
     type: Number
   },
   returnor: {
-    type: Boolean
+    type: Number
   },
   readmission: {
-    type: String
+    type: Number
   },
   otherproc1: {
     type: String
