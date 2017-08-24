@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Chart} from 'react-d3-core';
 import {BarChart} from 'react-d3-basic';
 
-class BarChart extends React.Component{
+class Bar extends React.Component{
     render() {
          var generalChartData = [
               {letter: "A", frequency: 0.08167},
@@ -28,7 +28,7 @@ class BarChart extends React.Component{
             name: 'Frequency'
           }
         ],
-        var x = (d) => {
+        x = (d) => {
           return d.letter;
         },
         xScale = 'ordinal',
@@ -53,4 +53,4 @@ class BarChart extends React.Component{
         }
     }
 
-export default BarChart;
+export default Bar;

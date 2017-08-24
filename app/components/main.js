@@ -1,7 +1,8 @@
 import React from 'react';
-import BarChart from './children/barChart';
-import LineChart from './children/lineChart';
+import Bar from './children/barChart';
+import Line from './children/lineChart';
 import Dropdowns from './children/dropdownlist';
+import Homepage from './children/homepage';
 
 class Main extends React.Component {
 

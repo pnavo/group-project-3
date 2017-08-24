@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {LineChart} from 'react-d3-basic';
 
-class LineChart extends React.Component{
+class Line extends React.Component{
     render() {
          var generalChartData = [
                 {
@@ -31,7 +31,7 @@ class LineChart extends React.Component{
             }
           ],
           // your x accessor
-          var x = (d) => {
+          x = (d) => {
             return parseDate(d.month);
           },
           xScale = 'time';
@@ -50,4 +50,4 @@ class LineChart extends React.Component{
         }
     }
 
-export default LineChart;
+export default Line;
