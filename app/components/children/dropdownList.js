@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import DropdownList from 'react-widget';
+import DropdownList from 'react-widget/lib/DropdownList';
 
 var primaryObjective = ['overall','specific'];
 

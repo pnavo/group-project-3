@@ -4,9 +4,9 @@ import { Route, IndexRoute, Router, browserHistory } from "react-router";
 
 // Reference the high-level components
 import Main from "../components/main";
-import BarChart from '/children/barChart';
-import LineChart from '.../components./components/children/lineChart';
-import Dropdowns from '../components/dropdownlist';
+import Bar from '../components/children/barChart';
+import Line from '../components/children/lineChart';
+import Dropdowns from '../components/children/dropdownlist';
 
 // Export the Routes
 var routes = (
@@ -15,8 +15,8 @@ var routes = (
       <Route path="/" component={Main}>
         <Route path="login" component={login} />
   
-        <Route path="parent" component={parent} />
-        <IndexRoute component={login} />
+        <Route path="homepage" component={homepage} />
+        <IndexRoute component={homepage} />
       </Route>
     </Router>
 );
