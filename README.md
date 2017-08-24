@@ -7,7 +7,7 @@ Built using a variety of packages, most notably MongoDB and Tensorflow.
 ## Getting Started: 
 Follow install instructions 
 -------------
-##Prerequisites:
+### Prerequisites:
 
 Install all dependencies 
 
@@ -21,7 +21,7 @@ Install Node.js
 
 --------------
 
-##Built With: 
+### Built With: 
 
 -MongoDB
 -Mongoose
@@ -39,7 +39,7 @@ Install Node.js
 
 ------------
 
-Contributors:
+### Contributors:
 
 Anthony Parvin
 
