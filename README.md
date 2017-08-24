@@ -1,8 +1,10 @@
-# Group Project : Group_project 4
+# Medi-Data Cruncher
 
-desc: Application that allows users to search demographics of a particular surgery outcomes and complications. Uses a massive database of 4 million individal records to compare .
+This application was made to compile and compare a variety of variable from a medical database from 2007-2015. Specifically surgeries to forearm fractures, where we compared open and closed fractures, outlining various outcomes, including rates of infection.
 
-##Getting Started: 
+Built using a variety of packages, most notably MongoDB and Tensorflow.
+
+## Getting Started: 
 Follow install instructions 
 -------------
 ##Prerequisites:
@@ -15,7 +17,7 @@ Install Node.js
 >> npm install
 
 --Step 2: 
->> open with "http://localhost:8080/"
+>> open with "http://localhost:8080/" on your preferred browser.
 
 --------------
 
@@ -32,6 +34,7 @@ Install Node.js
 -HTML
 -CSS
 -Bootstrap
+-Tensorflow
 
 
 ------------
