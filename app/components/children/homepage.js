@@ -46,10 +46,10 @@ class Homepage extends React.Component {
 				  	</div>
 				</div>
 				<div>
-					<BarChart/>
+					<Bar/>
 				</div>
 				<div>
-					<LineChart/>
+					<Line/>
 				</div>
 			</div>
 		);

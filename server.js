@@ -1,7 +1,6 @@
 var express = require("express");
 var mongoose = require("mongoose");
 var bodyParser = require("body-parser");
-var routes = require("./app/config/routes.js");
 var logger = require("morgan");
 var acs = require("./models/acs.js")
 var path = require("path");
@@ -27,4 +26,8 @@ mongoose.connect(db, (error) => {
 	else {
 		console.log("mongoose connection succesful");
 	}
+});
+
+app.listen(PORT, () => {
+  console.log("App listening on PORT: " + PORT);
 });
