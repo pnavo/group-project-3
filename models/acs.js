@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const acsSchema = new Schema({
+const radiusSchema = new Schema({
   cpt: {
     type: Number
   },
@@ -50,7 +50,7 @@ const acsSchema = new Schema({
   },
   optime: {
     type: Number
-  }
+  },
   othbleed: {
     type: Number
   },
@@ -89,5 +89,5 @@ const acsSchema = new Schema({
   }
 });
 
-const ACS = mongoose.model("ACS", acsSchema);
-module.exports = ACS;
+const Radius = mongoose.model("radius", radiusSchema);
+module.exports = Radius;
