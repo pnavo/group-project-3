@@ -32,9 +32,8 @@ class Line extends React.Component{
           ],
           // your x accessor
           x = (d) => {
-            return parseDate(d.month);
-          },
-          xScale = 'time';
+            return d.name;
+          }
 
          return (
             <LineChart
@@ -44,7 +43,6 @@ class Line extends React.Component{
               height={height}
               chartSeries={chartSeries}
               x={x}
-              xScale={xScale}
             />
             )
         }
