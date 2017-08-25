@@ -15,7 +15,7 @@ var generalChartData = [
         average: '1.124'
       },
       {
-        month: '2001M02',
+        month: '2001M09',
         total: '629350',
         incineration: '248283',
         garbageBury: '256351',
@@ -31,7 +31,7 @@ console.log(generalChartData);
 
 var parseDate = d3.time.format("%YM%m").parse;
 
-var width = 500,
+var width = 700,
 height = 300,
 margins = {left: 100, right: 100, top: 50, bottom: 50},
 // chart series,
@@ -53,6 +53,7 @@ chartSeries = [
 x = (d) => {
   return parseDate(d.month);
 },
+
 xScale = 'time';
 
 class Line extends React.Component{

@@ -1,6 +1,8 @@
 import React from 'react';
 import Bar from './barChart';
+import Bar2 from './barChart2';
 import Line from './lineChart';
+import Line2 from './lineChart2';
 
 class Homepage extends React.Component {
 	constructor(props) {
@@ -57,6 +59,16 @@ class Homepage extends React.Component {
 						</div>
 						<div className="col-md-6">
 							<Line/>
+						</div>
+					</div>
+				</div>
+				<div className="container-fluid">
+					<div className="row">
+						<div className="col-md-6">
+							<Bar2/>
+						</div>
+						<div className="col-md-6">
+							<Line2/>
 						</div>
 					</div>
 				</div>
