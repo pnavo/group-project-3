@@ -50,7 +50,7 @@ chartSeries = [
   }
 ],
 // your x accessor
-x = function(d) {
+x = (d) => {
   return parseDate(d.month);
 },
 xScale = 'time';
@@ -58,15 +58,19 @@ xScale = 'time';
 class Line extends React.Component{
     render() {
          return (
-            <LineChart
-              margins= {margins}
-              data={generalChartData}
-              width={width}
-              height={height}
-              chartSeries={chartSeries}
-              x={x}
-              xScale={xScale}
-            />
+            <div>
+              <h1 className="text-center">LineChart</h1>
+              <LineChart
+                title={"linechart"}
+                margins= {margins}
+                data={generalChartData}
+                width={width}
+                height={height}
+                chartSeries={chartSeries}
+                x={x}
+                xScale={xScale}
+              />
+            </div>
             )
         }
     }

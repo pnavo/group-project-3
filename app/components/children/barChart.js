@@ -37,10 +37,12 @@ class Bar extends React.Component{
         yTicks = [10, "%"];
 
          return (
+          <div>
+            <h1 className="text-center">BarChart</h1>
             <BarChart
             title= {title}
             data= {generalChartData}
-            width= {400}
+            width= {500}
             height= {300}
             chartSeries = {chartSeries}
             x= {x}
@@ -49,6 +51,7 @@ class Bar extends React.Component{
             yTicks= {yTicks}
             yLabel = {yLabel}
           />
+          </div>
             )
         }
     }

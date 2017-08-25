@@ -5,7 +5,6 @@ import { Route, IndexRoute, Router, browserHistory } from "react-router";
 import Main from "../components/main";
 import Bar from '../components/children/barChart';
 import Line from '../components/children/lineChart';
-import Dropdowns from '../components/children/dropdownlist';
 import Homepage from '../components/children/homepage'
 
 // Export the Routes

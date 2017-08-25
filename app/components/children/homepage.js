@@ -1,7 +1,6 @@
 import React from 'react';
 import Bar from './barChart';
 import Line from './lineChart';
-import Dropdowns from './dropdownlist';
 
 class Homepage extends React.Component {
 	constructor(props) {
@@ -30,10 +29,16 @@ class Homepage extends React.Component {
 			<div className="container-fluid">
 				<div className="panel panel-default">
 				  	<div className="panel-heading">
-				    	<h3 className="panel-title">Search</h3>
+				    	<h3 className="panel-title">How to view:</h3>
 				  	</div>
 				  	<div className="panel-body">
-				  		<Dropdowns/>
+				  		<div>
+					  		<select class="chosen-select" id="q1">
+		                        <option value="select">Select an Optison</option>
+		                        <option value="overall">overall</option>
+		                        <option value="specific">specific</option>
+	                         </select>
+	                    </div>
 						<br/>
 						<div id="searchSubmitDiv">
 							<button
@@ -45,11 +50,15 @@ class Homepage extends React.Component {
 						</div>
 				  	</div>
 				</div>
-				<div>
-					<Bar/>
-				</div>
-				<div>
-					<Line/>
+				<div className="container-fluid">
+					<div className="row">
+						<div className="col-md-6">
+							<Bar/>
+						</div>
+						<div className="col-md-6">
+							<Line/>
+						</div>
+					</div>
 				</div>
 			</div>
 		);
