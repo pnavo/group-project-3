@@ -1,4 +1,4 @@
-# Medi-Data Cruncher
+# Medi-Bot
 
 This application was made to compile and compare a variety of variable from a medical database from 2007-2015. Specifically surgeries to forearm fractures, where we compared open and closed fractures, outlining various outcomes, including rates of infection.
 
