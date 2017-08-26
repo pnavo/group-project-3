@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import rd3 from 'rd3';
+import axios from 'axios';
 
 const LineChart = rd3.LineChart;
 
@@ -14,6 +15,39 @@ var lineData = [
     ];
 
 class OpenFemale extends React.Component{
+  overall(){
+    axios.get("/overall/female/open")
+  }
+
+  othbleed(){
+    axios.get("/othbleed/female/open")
+  }
+
+
+  super(){
+    axios.get("/supinfec/female/open")
+
+  }
+
+  wound(){
+    axios.get("/woundinfd/female/open")
+
+  }
+  
+  trans(){
+    axios.get("/dehis/female/open")
+
+  }
+
+  reop(){
+    axios.get("/returnor/female/open")
+
+  }
+
+read(){
+    axios.get"/readmission/female/open")
+
+  }
   render() {
     return  (
       <div>

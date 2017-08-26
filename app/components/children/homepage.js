@@ -25,6 +25,33 @@ class Homepage extends React.Component {
 	// 	}.bind(this))
 	// 	console.log(this.state.articles)
 	// }
+	handleOverallButtonClick() {
+		this.overall()
+	}
+
+	handleSuperficialButtonClick(){
+		this.super()
+	}
+
+	handleDeepButtonClick(){
+		this.deep()
+	}
+
+	handleWoundButtonClick(){
+		this.wound()
+	}
+
+	handleTransfusionButtonClick(){
+		this.trans()
+	}
+
+	handleReadButtonClick(){
+		this.read()
+	}
+
+	ReopButtonClick(){
+		this.reop()
+	}
 	
 	render() {
 		return (
@@ -95,20 +122,76 @@ class Homepage extends React.Component {
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-md-6">
-							<OpenMale/>
+							<OpenMale
+							overall = {this.handleOverallButtonClick()}
+
+							superficial={this.handleSuperficialButtonClick()}
+
+							deep= {this.handleDeepButtonClick()}
+
+							wound= {this.handleWoundButtonClick()}
+							
+							trans= {this.handleTransfusionButtonClick()}
+
+							read= {this.handleReadButtonClick()}
+
+							reop = {this.ReopButtonClick()}
+							/>
 						</div>
 						<div className="col-md-6">
-							<OpenFemale/>
+							<OpenFemale
+							overall = {this.handleOverallButtonClick()}
+
+							superficial={this.handleSuperficialButtonClick()}
+
+							deep= {this.handleDeepButtonClick()}
+
+							wound= {this.handleWoundButtonClick()}
+							
+							trans= {this.handleTransfusionButtonClick()}
+
+							read= {this.handleReadButtonClick()}
+
+							reop = {this.ReopButtonClick()}
+							/>
 						</div>
 					</div>
 				</div>
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-md-6">
-							<ClosedMale/>
+							<ClosedMale
+							overall = {this.handleOverallButtonClick()}
+
+							superficial={this.handleSuperficialButtonClick()}
+
+							deep= {this.handleDeepButtonClick()}
+
+							wound= {this.handleWoundButtonClick()}
+							
+							trans= {this.handleTransfusionButtonClick()}
+
+							read= {this.handleReadButtonClick()}
+
+							reop = {this.ReopButtonClick()}
+							/>
 						</div>
 						<div className="col-md-6">
-							<ClosedFemale/>
+							<ClosedFemale
+							overall = {this.handleOverallButtonClick()}
+
+							superficial={this.handleSuperficialButtonClick()}
+
+							deep= {this.handleDeepButtonClick()}
+
+							wound= {this.handleWoundButtonClick()}
+							
+							trans= {this.handleTransfusionButtonClick()}
+
+							read= {this.handleReadButtonClick()}
+
+							reop = {this.ReopButtonClick()}
+							/>
 						</div>
 					</div>
 				</div>

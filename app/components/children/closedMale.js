@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import rd3 from 'rd3';
+import axios from 'axios';
 
 const LineChart = rd3.LineChart;
 
@@ -14,6 +15,39 @@ var lineData = [
     ];
 
 class ClosedMale extends React.Component{
+  overall(){
+    axios.get("/overall/male/closed")
+  }
+
+  othbleed(){
+    axios.get("/othbleed/male/closed")
+  }
+
+
+  super(){
+    axios.get("/supinfec/male/closed")
+
+  }
+
+  wound(){
+    axios.get("/woundinfd/male/closed")
+
+  }
+  
+  trans(){
+    axios.get("/dehis/male/closed")
+
+  }
+
+  reop(){
+    axios.get("/returnor/male/closed")
+
+  }
+
+read(){
+    axios.get"/readmission/male/closed")
+
+  }
   render() {
     return  (
       <div>
