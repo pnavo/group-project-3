@@ -1,8 +1,8 @@
 import React from 'react';
-import Bar from './barChart';
-import Bar2 from './barChart2';
-import Line from './lineChart';
-import Line2 from './lineChart2';
+import OpenMale from './openMale';
+import ClosedMale from './closedMale';
+import OpenFemale from './openFemale';
+import ClosedFemale from './closedFemale';
 
 class Homepage extends React.Component {
 	constructor(props) {
@@ -34,20 +34,60 @@ class Homepage extends React.Component {
 				    	<h3 className="panel-title">How to view:</h3>
 				  	</div>
 				  	<div className="panel-body">
-				  		<div>
-					  		<select class="chosen-select" id="q1">
-		                        <option value="select">Select an Optison</option>
-		                        <option value="overall">overall</option>
-		                        <option value="specific">specific</option>
-	                         </select>
-	                    </div>
-						<br/>
-						<div id="searchSubmitDiv">
+			  			<div id="searchOverallDiv">
 							<button
-								onClick={this.handleButtonClick}
-								className="btn btn-default"
+								onClick={this.handleOverallButtonClick}
+								className="btn btn-default pull-left"
 							>
-								Submit
+								Overall
+							</button>
+						</div>
+				    	<div id="searchSuperficiallDiv">
+							<button
+								onClick={this.handleSuperficialButtonClick}
+								className="btn btn-default pull-left"
+							>
+								Superficial Infection
+							</button>
+						</div>
+						<div id="searchDeepDiv">
+							<button
+								onClick={this.handleDeepButtonClick}
+								className="btn btn-default pull-left"
+							>
+								Deep Infection
+							</button>
+						</div>
+						<div id="searchWoundDiv">
+							<button
+								onClick={this.handleWoundButtonClick}
+								className="btn btn-default pull-left"
+							>
+								Wound Disruptions
+							</button>
+						</div>
+						<div id="searchTransfusionDiv">
+							<button
+								onClick={this.handleTransfusionButtonClick}
+								className="btn btn-default pull-left"
+							>
+								Transfusion
+							</button>
+						</div>
+						<div id="searchReadDiv">
+							<button
+								onClick={this.handleReadButtonClick}
+								className="btn btn-default pull-left"
+							>
+								Readmission
+							</button>
+						</div>
+						<div id="searchReopDiv">
+							<button
+								onClick={this.ReopButtonClick}
+								className="btn btn-default pull-left"
+							>
+								Reoperation
 							</button>
 						</div>
 				  	</div>
@@ -55,20 +95,20 @@ class Homepage extends React.Component {
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-md-6">
-							<Bar/>
+							<OpenMale/>
 						</div>
 						<div className="col-md-6">
-							<Line/>
+							<OpenFemale/>
 						</div>
 					</div>
 				</div>
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-md-6">
-							<Bar2/>
+							<ClosedMale/>
 						</div>
 						<div className="col-md-6">
-							<Line2/>
+							<ClosedFemale/>
 						</div>
 					</div>
 				</div>

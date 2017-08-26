@@ -3,8 +3,10 @@ import { Route, IndexRoute, Router, browserHistory } from "react-router";
 
 // Reference the high-level components
 import Main from "../components/main";
-import Bar from '../components/children/barChart';
-import Line from '../components/children/lineChart';
+import ClosedFemale from '../components/children/closedFemale';
+import ClosedMale from '../components/children/closedMale';
+import OpenFemale from '../components/children/openFemale';
+import OpenMale from '../components/children/openMale';
 import Homepage from '../components/children/homepage'
 
 // Export the Routes
