@@ -1,8 +1,4 @@
 node_modules
 .DS_Store
 helpers.js
-<<<<<<< HEAD
 bundle.js
-=======
-bundle.js
->>>>>>> 5350b5af91aea654ac050783c118f78a16369883
