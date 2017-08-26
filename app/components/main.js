@@ -1,6 +1,8 @@
 import React from 'react';
-import Bar from './children/barChart';
-import Line from './children/lineChart';
+import OpenMale from './children/openMale';
+import ClosedMale from './children/closedMale';
+import OpenFemale from './children/openFemale';
+import ClosedFemale from './children/closedFemale';
 import Homepage from './children/homepage';
 
 class Main extends React.Component {
