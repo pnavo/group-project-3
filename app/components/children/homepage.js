@@ -1,8 +1,8 @@
 import React from 'react';
-import Bar from './barChart';
-import Bar2 from './barChart2';
-import Line from './lineChart';
-import Line2 from './lineChart2';
+import OpenMale from './openMale';
+import ClosedMale from './closedMale';
+import OpenFemale from './openFemale';
+import ClosedFemale from './closedFemale';
 
 class Homepage extends React.Component {
 	constructor(props) {
@@ -95,20 +95,20 @@ class Homepage extends React.Component {
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-md-6">
-							<Bar/>
+							<OpenMale/>
 						</div>
 						<div className="col-md-6">
-							<Line/>
+							<OpenFemale/>
 						</div>
 					</div>
 				</div>
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-md-6">
-							<Bar2/>
+							<ClosedMale/>
 						</div>
 						<div className="col-md-6">
-							<Line2/>
+							<ClosedFemale/>
 						</div>
 					</div>
 				</div>
