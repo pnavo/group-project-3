@@ -27,7 +27,7 @@ mongoose.connect(db, (error) => {
 });
 
 app.get("/overall/male/open", (req, res) => {
-	acs.find({$and: [{sex: 0},{wndinf:1},{$or:[{othbleed: 1},{supinfec:1},{wndinfd:1},{dehis:1},{returnor:1},{readmission:1}]}]}).then(function(err, doc){
+	acs.find({$and: [{sex: 0},{wndinf:1},{$or:[{othbleed: 1},{supinfec:1},{wndinfd:1},{dehis:1},{returnor:1},{readmission:1}]}]}).then((err, doc) => {
 		if (err) throw err
 		else{
    			res.send(doc)
@@ -36,7 +36,7 @@ app.get("/overall/male/open", (req, res) => {
 })
 
 app.get("/overall/female/open", (req, res) => {
-	acs.find({$and: [{sex: 1},{wndinf:1},{$or:[{othbleed: 1},{supinfec:1},{wndinfd:1},{dehis:1},{returnor:1},{readmission:1}]}]}).then(function(err, doc){
+	acs.find({$and: [{sex: 1},{wndinf:1},{$or:[{othbleed: 1},{supinfec:1},{wndinfd:1},{dehis:1},{returnor:1},{readmission:1}]}]}).then((err, doc) => {
 		if (err) throw err
 		else{
    			res.send(doc)
@@ -45,7 +45,7 @@ app.get("/overall/female/open", (req, res) => {
 })
 
 app.get("/overall/male/closed", (req, res) => {
-	acs.find({$and: [{sex: 0},{wndinf:0},{$or:[{othbleed: 1},{supinfec:1},{wndinfd:1},{dehis:1},{returnor:1},{readmission:1}]}]}).then(function(err, doc){
+	acs.find({$and: [{sex: 0},{wndinf:0},{$or:[{othbleed: 1},{supinfec:1},{wndinfd:1},{dehis:1},{returnor:1},{readmission:1}]}]}).then((err, doc) => {
 		if (err) throw err
 		else{
    			res.send(doc)
@@ -54,7 +54,7 @@ app.get("/overall/male/closed", (req, res) => {
 })
 
 app.get("/overall/female/closed", (req, res) => {
-	acs.find({$and: [{sex: 1},{wndinf:0},{$or:[{othbleed: 1},{supinfec:1},{wndinfd:1},{dehis:1},{returnor:1},{readmission:1}]}]}).then(function(err, doc){
+	acs.find({$and: [{sex: 1},{wndinf:0},{$or:[{othbleed: 1},{supinfec:1},{wndinfd:1},{dehis:1},{returnor:1},{readmission:1}]}]}).then((err, doc) => {
 		if (err) throw err
 		else{
    			res.send(doc)
@@ -144,7 +144,7 @@ app.get("/wndinfd/male/open", (req, res) => {
 })
 
 app.get("/wndinfd/female/open", (req, res) => {
-	acs.find({$and: [{sex: 1},{wndinf:1},{indinfd:1}]}).then((err,doc) => {
+	acs.find({$and: [{sex: 1},{wndinf:1},{wndinfd:1}]}).then((err,doc) => {
 		if (err) throw err
 		else{
    			res.send(doc)
@@ -153,7 +153,7 @@ app.get("/wndinfd/female/open", (req, res) => {
 })
 
 app.get("/wndinfd/male/closed", (req, res) => {
-	acs.find({$and: [{sex: 0},{wndinf:0},{dndinfd:1}]}).then((err,doc) => {
+	acs.find({$and: [{sex: 0},{wndinf:0},{wndinfd:1}]}).then((err,doc) => {
 		if (err) throw err
 		else{
    			res.send(doc)
@@ -161,7 +161,7 @@ app.get("/wndinfd/male/closed", (req, res) => {
 	})
 })
 
-app.get("/windifd/female/closed", (req, res) => {
+app.get("/wndinfd/female/closed", (req, res) => {
 	acs.find({$and: [{sex: 1},{wndinf:0},{wndinfd:1}]}).then((err,doc) => {
 		if (err) throw err
 		else{
