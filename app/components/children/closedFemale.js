@@ -7,7 +7,8 @@ const LineChart = rd3.LineChart;
 var lineData = [
       { 
         name: 'series1',
-        values: [ { x: 17, y: 0 },],
+        values: [{x:18,y:1}],
+
         strokeWidth: 3,
         strokeDashArray: "5,5",
       }
@@ -20,9 +21,11 @@ class ClosedFemale extends React.Component{
   
   componentWillReceiveProps() {
 
-    console.log(this.props.data)
-    
-    if (this.props.selector === "othbleed") {
+    lineData[0].values = [{x:18,y:1}]
+
+      
+    if (this.props.selector) {
+      lineData[0].name = this.props.selector
       for (var i = 18; i < 90; i++) {
         var counter = 0
         for(var j = 0; j<this.props.data.length;j++){
@@ -30,8 +33,8 @@ class ClosedFemale extends React.Component{
             counter = counter + 1
           }
         }
-        console.log(counter)
-        lineData[0].values.push({ x: i, y: [counter] })
+   
+        lineData[0].values.push({ x: i, y: counter })
       }
         
     }
@@ -55,7 +58,7 @@ class ClosedFemale extends React.Component{
         title="Closed Female"
         yAxisLabel="Rate of"
         xAxisLabel="Age"
-        domain={{x: [18,90], y: [0,1]}}
+        domain={{x: [18,90], y: [0,10]}}
         gridHorizontal={true}
       />
       </div>

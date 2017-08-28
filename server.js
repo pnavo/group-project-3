@@ -33,7 +33,7 @@ app.get("/overall/male/open", (req, res) => {
 			console.log(JSON.stringify(err) + "ERRRRROR")
 		} 
 		else{
-			console.log(doc)
+			
    			res.send(doc)
 		}
 	}))
@@ -79,7 +79,7 @@ app.get("/othbleed/male/open", (req, res) => {
 			console.log(err)
 		} 
 		else{
-			console.log(doc)
+			
    			res.send(doc)
 		}
 	}))
@@ -124,7 +124,7 @@ app.get("/supinfec/male/open", (req, res) => {
 			console.log(err)
 		} 
 		else{
-			console.log(doc)
+			
    			res.send(doc)
 		}
 	}))
@@ -169,7 +169,7 @@ app.get("/wndinfd/male/open", (req, res) => {
 			console.log(err)
 		} 
 		else{
-			console.log(doc)
+			
    			res.send(doc)
 		}
 	}))
@@ -214,7 +214,7 @@ app.get("/dehis/male/open", (req, res) => {
 			console.log(err)
 		} 
 		else{
-			console.log(doc)
+			
    			res.send(doc)
 		}
 	}))
