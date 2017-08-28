@@ -15,39 +15,10 @@ var lineData = [
     ];
 
 class OpenFemale extends React.Component{
-  overall(){
-    axios.get("/overall/female/open")
+  onentDidMount(){
+    this.props.overall().of
   }
 
-  othbleed(){
-    axios.get("/othbleed/female/open")
-  }
-
-
-  super(){
-    axios.get("/supinfec/female/open")
-
-  }
-
-  wound(){
-    axios.get("/woundinfd/female/open")
-
-  }
-  
-  trans(){
-    axios.get("/dehis/female/open")
-
-  }
-
-  reop(){
-    axios.get("/returnor/female/open")
-
-  }
-
-read(){
-    axios.get"/readmission/female/open")
-
-  }
   render() {
     return  (
       <div>
