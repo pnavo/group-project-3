@@ -3,11 +3,16 @@ import OpenMale from './openMale';
 import ClosedMale from './closedMale';
 import OpenFemale from './openFemale';
 import ClosedFemale from './closedFemale';
+import axios from 'axios';
 
 class Homepage extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			omData:{},
+			ofData:{},
+			cfData:{},
+			cmData:{}
 		};
 		
 		this.handleOverallButtonClick = this.handleOverallButtonClick.bind(this);
@@ -32,54 +37,135 @@ class Homepage extends React.Component {
 	// 	console.log(this.state.articles)
 	// }
 	handleOverallButtonClick() {
-		var cf = () => {axios.get("/overall/female/closed")}
-		var cm = () => {axios.get("/overall/male/closed")}
-		var of = () => {axios.get("/overall/female/open")}
-		var om = () => {axios.get("/overall/female/closed")}
+		axios.get("/overall/male/open").then(function(response){
+		this.setState({omData: response.data})
+		})
 
+		axios.get("/overall/male/closed").then(function(response){
+		this.setState({cmData: response.data})
+		})
+
+		axios.get("/overall/female/open").then(function(response){
+		this.setState({ofData: resonse.data})
+		})
+
+		axios.get("/overall/female/closed").then(function(response){
+		this.setState({cfData: response.data})
+		})
 	}
 
 	handleSuperficialButtonClick(){
-		var cf = () => {axios.get("/supinfec/female/closed")}
-		var cm = () => {axios.get("/supinfec/male/closed")}
-		var of = () => {axios.get("/supinfec/female/open")}
-		var om = () => {axios.get("/supinfec/female/closed")}
+		axios.get("/supinfec/male/open").then(function(response){
+		this.setState({omData: response.data})
+		})
+
+		axios.get("/supinfec/male/closed").then(function(response){
+		this.setState({cmData: response.data})
+		})
+
+		axios.get("/supinfec/female/open").then(function(response){
+		this.setState({ofData: resonse.data})
+		})
+
+		axios.get("/supinfec/female/closed").then(function(response){
+		this.setState({cfData: response.data})
+		})
 	}
 
 	handleDeepButtonClick(){
-		var cf = () => {axios.get("/woundinfd/female/closed")}
-		var cm = () => {axios.get("/woundinfd/male/closed")}
-		var of = () => {axios.get("/woundinfd/female/open")}
-		var om = () => {axios.get("/woundinfd/female/closed")}
+		
+		axios.get("/woundinfd/male/open").then(function(response){
+		this.setState({omData: response.data})
+		})
+
+		axios.get("/woundinfd/male/closed").then(function(response){
+		this.setState({cmData: response.data})
+		})
+
+		axios.get("/woundinfd/female/open").then(function(response){
+		this.setState({ofData: resonse.data})
+		})
+
+		axios.get("/woundinfd/female/closed").then(function(response){
+		this.setState({cfData: response.data})
+		})
 	}
 
 	handleWoundButtonClick(){
-		var cf = () => {axios.get("/dehis/female/closed")}
-		var cm = () => {axios.get("/dehis/male/closed")}
-		var of = () => {axios.get("/dehis/female/open")}
-		var om = () => {axios.get("/dehis/female/closed")}
+		
+		axios.get("/dehis/male/open").then(function(response){
+		this.setState({omData: response.data})
+		})
+
+		axios.get("/dehis/male/closed").then(function(response){
+		this.setState({cmData: response.data})
+		})
+
+		axios.get("/dehis/female/open").then(function(response){
+		this.setState({ofData: resonse.data})
+		})
+
+		axios.get("/dehis/female/closed").then(function(response){
+		this.setState({cfData: response.data})
+		})
 	}
 
 	handleTransfusionButtonClick(){
-		var cf = () => {axios.get("/othbleed/female/closed")}
-		var cm = () => {axios.get("/othbleed/male/closed")}
-		var of = () => {axios.get("/othbleed/female/open")}
-		var om = () => {axios.get("/othbleed/female/closed")}
+		
+		axios.get("/othbleed/male/open").then(function(response){
+		this.setState({omData: response.data})
+		})
+
+		axios.get("/othbleed/male/closed").then(function(response){
+		this.setState({cmData: response.data})
+		})
+
+		axios.get("/othbleed/female/open").then(function(response){
+		this.setState({ofData: resonse.data})
+		})
+
+		axios.get("/othbleed/female/closed").then(function(response){
+		this.setState({cfData: response.data})
+		})
 
 	}
 
 	handleReadButtonClick(){
-		var cf = () => {axios.get("/readmission/female/closed")}
-		var cm = () => {axios.get("/readmission/male/closed")}
-		var of = () => {axios.get("/readmission/female/open")}
-		var om = () => {axios.get("/readmission/female/closed")}
+	
+		axios.get("/readmission/male/open").then(function(response){
+		this.setState({omData: response.data})
+		})
+
+		axios.get("/readmission/male/closed").then(function(response){
+		this.setState({cmData: response.data})
+		})
+
+		axios.get("/readmission/female/open").then(function(response){
+		this.setState({ofData: resonse.data})
+		})
+
+		axios.get("/readmission/female/closed").then(function(response){
+		this.setState({cfData: response.data})
+		})
 	}
 
 	handleReopButtonClick(){
-		var cf = () => {axios.get("/returnor/female/closed")}
-		var cm = () => {axios.get("/returnor/male/closed")}
-		var of = () => {axios.get("/returnor/female/open")}
-		var om = () => {axios.get("/returnor/female/closed")}
+		
+		axios.get("/returnor/male/open").then(function(response){
+		this.setState({omData: response.data})
+		})
+
+		axios.get("/returnor/male/closed").then(function(response){
+		this.setState({cmData: response.data})
+		})
+
+		axios.get("/returnor/female/open").then(function(response){
+		this.setState({ofData: resonse.data})
+		})
+
+		axios.get("/returnor/female/closed").then(function(response){
+		this.setState({cfData: response.data})
+		})
 	}
 	
 	render() {

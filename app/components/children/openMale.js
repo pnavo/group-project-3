@@ -22,11 +22,12 @@ var lineData = [
     ];
 
 class OpenMale extends React.Component{
-    componentDidMount(){
-    this.props.overall().om
+
+  constructor(props) {
+    super(props);
+    
   }
-  
-  
+  componentWillReceiveProps(){}
   render() {
     return  (
       <div>

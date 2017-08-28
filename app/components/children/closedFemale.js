@@ -15,10 +15,13 @@ var lineData = [
     ];
 
 class ClosedFemale extends React.Component{
-  
-  componentDidMount(){
-    this.props.overall().cf
- }
+  constructor(props) {
+    super(props);
+    
+  }
+
+  componentWillReceiveProps(){}
+
   render() {
     return  (
       <div>

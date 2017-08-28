@@ -15,9 +15,13 @@ var lineData = [
     ];
 
 class OpenFemale extends React.Component{
-  onentDidMount(){
-    this.props.overall().of
+  constructor(props) {
+    super(props);
+    
   }
+
+  componentWillReceiveProps(){}
+ 
 
   render() {
     return  (
