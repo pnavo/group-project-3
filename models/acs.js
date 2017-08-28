@@ -1,8 +1,8 @@
 var mongoose = require("mongoose");
 
-const Schema = mongoose.Schema;
+var Schema = mongoose.Schema;
 
-const radiusSchema = new Schema({
+var radiusSchema = new Schema({
   cpt: {
     type: Number
   },
@@ -92,5 +92,5 @@ const radiusSchema = new Schema({
   }
 });
 
-const Radius = mongoose.model("radius", radiusSchema);
+var Radius = mongoose.model("case", radiusSchema);
 module.exports = Radius;

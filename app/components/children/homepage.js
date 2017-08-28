@@ -38,6 +38,9 @@ class Homepage extends React.Component {
 	// 	console.log(this.state.articles)
 	// }
 	handleOverallButtonClick() {
+
+		this.setState({selector: "overall"})
+
 		axios.get("/overall/male/open").then((response) => {
 			this.setState({omData: response.data})
 		})
@@ -47,7 +50,7 @@ class Homepage extends React.Component {
 		})
 
 		axios.get("/overall/female/open").then((response) => {
-			this.setState({ofData: resonse.data})
+			this.setState({ofData: response.data})
 		})
 
 		axios.get("/overall/female/closed").then((response) => {
@@ -56,6 +59,9 @@ class Homepage extends React.Component {
 	}
 
 	handleSuperficialButtonClick(){
+
+		this.setState({selector: "supinfec"})
+
 		axios.get("/supinfec/male/open").then((response) => {
 			this.setState({omData: response.data})
 		})
@@ -65,7 +71,7 @@ class Homepage extends React.Component {
 		})
 
 		axios.get("/supinfec/female/open").then((response) => {
-			this.setState({ofData: resonse.data})
+			this.setState({ofData: response.data})
 		})
 
 		axios.get("/supinfec/female/closed").then((response) => {
@@ -74,6 +80,8 @@ class Homepage extends React.Component {
 	}
 
 	handleDeepButtonClick(){
+
+		this.setState({selector: "wndinfd"})
 		
 		axios.get("/wndinfd/male/open").then((response) => {
 			this.setState({omData: response.data})
@@ -84,7 +92,7 @@ class Homepage extends React.Component {
 		})
 
 		axios.get("/wndinfd/female/open").then((response) => {
-			this.setState({ofData: resonse.data})
+			this.setState({ofData: response.data})
 		})
 
 		axios.get("/wndinfd/female/closed").then((response) => {
@@ -93,6 +101,8 @@ class Homepage extends React.Component {
 	}
 
 	handleWoundButtonClick(){
+
+		this.setState({selector: "dehis"})
 		
 		axios.get("/dehis/male/open").then((response) => {
 			this.setState({omData: response.data})
@@ -103,7 +113,7 @@ class Homepage extends React.Component {
 		})
 
 		axios.get("/dehis/female/open").then((response) => {
-			this.setState({ofData: resonse.data})
+			this.setState({ofData: response.data})
 		})
 
 		axios.get("/dehis/female/closed").then((response) => {
@@ -123,7 +133,7 @@ class Homepage extends React.Component {
 		})
 
 		axios.get("/othbleed/female/open").then((response) => {
-			this.setState({ofData: resonse.data})
+			this.setState({ofData: response.data})
 		})
 
 		axios.get("/othbleed/female/closed").then((response) => {
@@ -133,6 +143,8 @@ class Homepage extends React.Component {
 	}
 
 	handleReadButtonClick(){
+
+		this.setState({selector: "readmission"})
 	
 		axios.get("/readmission/male/open").then((response) => {
 			this.setState({omData: response.data})
@@ -143,7 +155,7 @@ class Homepage extends React.Component {
 		})
 
 		axios.get("/readmission/female/open").then((response) => {
-			this.setState({ofData: resonse.data})
+			this.setState({ofData: response.data})
 		})
 
 		axios.get("/readmission/female/closed").then((response) => {
@@ -152,6 +164,8 @@ class Homepage extends React.Component {
 	}
 
 	handleReopButtonClick(){
+
+		this.setState({selector: "returnor"})
 		
 		axios.get("/returnor/male/open").then((response) => {
 			this.setState({omData: response.data})
@@ -162,7 +176,7 @@ class Homepage extends React.Component {
 		})
 
 		axios.get("/returnor/female/open").then((response) => {
-			this.setState({ofData: resonse.data})
+			this.setState({ofData: response.data})
 		})
 
 		axios.get("/returnor/female/closed").then((response) => {
@@ -240,11 +254,13 @@ class Homepage extends React.Component {
 						<div className="col-md-6">
 							<OpenMale
 							data={this.state.omData}
+							selector={this.state.selector}
 							/>
 						</div>
 						<div className="col-md-6">
 							<OpenFemale
 							data={this.state.ofData}
+							selector={this.state.selector}
 							/>
 						</div>
 					</div>
@@ -254,11 +270,13 @@ class Homepage extends React.Component {
 						<div className="col-md-6">
 							<ClosedMale
 							data={this.state.cmData}
+							selector={this.state.selector}
 							/>
 						</div>
 						<div className="col-md-6">
 							<ClosedFemale
 							data={this.state.cfData}
+							selector={this.state.selector}
 							/>
 						</div>
 					</div>

@@ -26,7 +26,10 @@ class OpenMale extends React.Component{
     super(props);
   }
   
-  componentWillReceiveProps() {}
+  componentWillReceiveProps() {
+
+    console.log(this.props)
+  }
   
   render() {
     return  (
