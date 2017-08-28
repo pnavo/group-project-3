@@ -30,10 +30,9 @@ mongoose.connect(db, (error) => {
 app.get("/overall/male/open", (req, res) => {
 	Radius.find({$and: [{sex: 0},{wndinf:1},{$or:[{othbleed: 1},{supinfec:1},{wndinfd:1},{dehis:1},{returnor:1},{readmission:1}]}]}, ((err, doc) => {
 		if (err){
-			console.log(JSON.stringify(err) + "ERRRRROR")
+			console.log(err)
 		} 
 		else{
-			console.log(doc)
    			res.send(doc)
 		}
 	}))
@@ -79,7 +78,6 @@ app.get("/othbleed/male/open", (req, res) => {
 			console.log(err)
 		} 
 		else{
-			console.log(doc)
    			res.send(doc)
 		}
 	}))
@@ -124,7 +122,6 @@ app.get("/supinfec/male/open", (req, res) => {
 			console.log(err)
 		} 
 		else{
-			console.log(doc)
    			res.send(doc)
 		}
 	}))
@@ -169,7 +166,6 @@ app.get("/wndinfd/male/open", (req, res) => {
 			console.log(err)
 		} 
 		else{
-			console.log(doc)
    			res.send(doc)
 		}
 	}))
@@ -214,7 +210,6 @@ app.get("/dehis/male/open", (req, res) => {
 			console.log(err)
 		} 
 		else{
-			console.log(doc)
    			res.send(doc)
 		}
 	}))
