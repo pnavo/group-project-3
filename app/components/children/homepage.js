@@ -74,19 +74,19 @@ class Homepage extends React.Component {
 
 	handleDeepButtonClick(){
 		
-		axios.get("/woundinfd/male/open").then(function(response){
+		axios.get("/wndinfd/male/open").then(function(response){
 		this.setState({omData: response.data})
 		})
 
-		axios.get("/woundinfd/male/closed").then(function(response){
+		axios.get("/wndinfd/male/closed").then(function(response){
 		this.setState({cmData: response.data})
 		})
 
-		axios.get("/woundinfd/female/open").then(function(response){
+		axios.get("/wndinfd/female/open").then(function(response){
 		this.setState({ofData: resonse.data})
 		})
 
-		axios.get("/woundinfd/female/closed").then(function(response){
+		axios.get("/wndinfd/female/closed").then(function(response){
 		this.setState({cfData: response.data})
 		})
 	}
