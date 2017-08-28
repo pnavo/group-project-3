@@ -1,7 +1,11 @@
 body { 
-	background-image: url('../images/tree.png');
+	background-image: url('../images/medi_background.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
+}
+
+LineChart {
+	background-color: white;
 }
