@@ -60,6 +60,9 @@ const radiusSchema = new Schema({
   wndinf: {
     type: Number
   },
+  wndinfd: {
+    type: Number
+  },
   dehis: {
     type: Number
   },
