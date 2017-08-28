@@ -9,6 +9,7 @@ class Homepage extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			selector: "",
 			omData:{},
 			ofData:{},
 			cfData:{},
@@ -38,94 +39,95 @@ class Homepage extends React.Component {
 	// }
 	handleOverallButtonClick() {
 		axios.get("/overall/male/open").then((response) => {
-		this.setState({omData: response.data})
+			this.setState({omData: response.data})
 		})
 
 		axios.get("/overall/male/closed").then((response) => {
-		this.setState({cmData: response.data})
+			this.setState({cmData: response.data})
 		})
 
 		axios.get("/overall/female/open").then((response) => {
-		this.setState({ofData: resonse.data})
+			this.setState({ofData: resonse.data})
 		})
 
 		axios.get("/overall/female/closed").then((response) => {
-		this.setState({cfData: response.data})
+			this.setState({cfData: response.data})
 		})
 	}
 
 	handleSuperficialButtonClick(){
 		axios.get("/supinfec/male/open").then((response) => {
-		this.setState({omData: response.data})
+			this.setState({omData: response.data})
 		})
 
 		axios.get("/supinfec/male/closed").then((response) => {
-		this.setState({cmData: response.data})
+			this.setState({cmData: response.data})
 		})
 
 		axios.get("/supinfec/female/open").then((response) => {
-		this.setState({ofData: resonse.data})
+			this.setState({ofData: resonse.data})
 		})
 
 		axios.get("/supinfec/female/closed").then((response) => {
-		this.setState({cfData: response.data})
+			this.setState({cfData: response.data})
 		})
 	}
 
 	handleDeepButtonClick(){
 		
 		axios.get("/wndinfd/male/open").then((response) => {
-		this.setState({omData: response.data})
+			this.setState({omData: response.data})
 		})
 
 		axios.get("/wndinfd/male/closed").then((response) => {
-		this.setState({cmData: response.data})
+			this.setState({cmData: response.data})
 		})
 
 		axios.get("/wndinfd/female/open").then((response) => {
-		this.setState({ofData: resonse.data})
+			this.setState({ofData: resonse.data})
 		})
 
 		axios.get("/wndinfd/female/closed").then((response) => {
-		this.setState({cfData: response.data})
+			this.setState({cfData: response.data})
 		})
 	}
 
 	handleWoundButtonClick(){
 		
 		axios.get("/dehis/male/open").then((response) => {
-		this.setState({omData: response.data})
+			this.setState({omData: response.data})
 		})
 
 		axios.get("/dehis/male/closed").then((response) => {
-		this.setState({cmData: response.data})
+			this.setState({cmData: response.data})
 		})
 
 		axios.get("/dehis/female/open").then((response) => {
-		this.setState({ofData: resonse.data})
+			this.setState({ofData: resonse.data})
 		})
 
 		axios.get("/dehis/female/closed").then((response) => {
-		this.setState({cfData: response.data})
+			this.setState({cfData: response.data})
 		})
 	}
 
 	handleTransfusionButtonClick(){
+			this.setState({selector: "othbleed"})
 		
 		axios.get("/othbleed/male/open").then((response) => {
-		this.setState({omData: response.data})
+			this.setState({omData: response.data})
 		})
 
 		axios.get("/othbleed/male/closed").then((response) => {
-		this.setState({cmData: response.data})
+			this.setState({cmData: response.data})
 		})
 
 		axios.get("/othbleed/female/open").then((response) => {
-		this.setState({ofData: resonse.data})
+			this.setState({ofData: resonse.data})
 		})
 
 		axios.get("/othbleed/female/closed").then((response) => {
-		this.setState({cfData: response.data})
+			this.setState({cfData: response.data})
 		})
 
 	}
@@ -133,38 +135,38 @@ class Homepage extends React.Component {
 	handleReadButtonClick(){
 	
 		axios.get("/readmission/male/open").then((response) => {
-		this.setState({omData: response.data})
+			this.setState({omData: response.data})
 		})
 
 		axios.get("/readmission/male/closed").then((response) => {
-		this.setState({cmData: response.data})
+			this.setState({cmData: response.data})
 		})
 
 		axios.get("/readmission/female/open").then((response) => {
-		this.setState({ofData: resonse.data})
+			this.setState({ofData: resonse.data})
 		})
 
 		axios.get("/readmission/female/closed").then((response) => {
-		this.setState({cfData: response.data})
+			this.setState({cfData: response.data})
 		})
 	}
 
 	handleReopButtonClick(){
 		
 		axios.get("/returnor/male/open").then((response) => {
-		this.setState({omData: response.data})
+			this.setState({omData: response.data})
 		})
 
 		axios.get("/returnor/male/closed").then((response) => {
-		this.setState({cmData: response.data})
+			this.setState({cmData: response.data})
 		})
 
 		axios.get("/returnor/female/open").then((response) => {
-		this.setState({ofData: resonse.data})
+			this.setState({ofData: resonse.data})
 		})
 
 		axios.get("/returnor/female/closed").then((response) => {
-		this.setState({cfData: response.data})
+			this.setState({cfData: response.data})
 		})
 	}
 	render() {
