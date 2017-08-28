@@ -15,14 +15,13 @@ var lineData = [
     ];
 
 class ClosedMale extends React.Component{
+  componentWillReceiveProps() {
   
-  componentDidMount(){
-    this.props.overall().cm
   }
   
   render() {
     return  (
-      <div>
+      <div className="line-graph">
       <LineChart
         legend={true}
         data={lineData}

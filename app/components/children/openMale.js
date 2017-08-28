@@ -22,14 +22,13 @@ var lineData = [
     ];
 
 class OpenMale extends React.Component{
-    componentDidMount(){
-    this.props.overall().om
-  }
+  componentWillReceiveProps() {
   
+  }
   
   render() {
     return  (
-      <div>
+      <div className="line-graph">
       <LineChart
         legend={true}
         data={lineData}
