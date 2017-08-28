@@ -3,14 +3,25 @@ import OpenMale from './openMale';
 import ClosedMale from './closedMale';
 import OpenFemale from './openFemale';
 import ClosedFemale from './closedFemale';
+import axios from 'axios';
 
 class Homepage extends React.Component {
 	constructor(props) {
 		super(props);
-		// this.state = {
-		// };
-		// this.handleInputChange = this.handleInputChange.bind(this);
-		// this.handleButtonClick = this.handleButtonClick.bind(this);
+		this.state = {
+			omData:{},
+			ofData:{},
+			cfData:{},
+			cmData:{}
+		};
+		
+		this.handleOverallButtonClick = this.handleOverallButtonClick.bind(this);
+		this.handleSuperficialButtonClick = this.handleSuperficialButtonClick.bind(this);
+		this.handleDeepButtonClick = this.handleDeepButtonClick.bind(this);
+		this.handleWoundButtonClick = this.handleWoundButtonClick.bind(this);
+		this.handleTransfusionButtonClick = this.handleTransfusionButtonClick.bind(this);
+		this.handleReadButtonClick = this.handleReadButtonClick.bind(this);
+		this.handleReopButtonClick= this.handleReopButtonClick.bind(this);
 	}
 
 	// handleInputChange(event) {
@@ -19,40 +30,143 @@ class Homepage extends React.Component {
 	// handleButtonClick() {
 	// 	this.setParent(this.state.topic, this.state.startYear, this.state.endYear);
 	// 	console.log("click")
-	// 	helpers.getArticles(this.state.topic, this.state.startYear, this.state.endYear).then(function(response){
+	// 	helpers.getArticles(this.state.topic, this.state.startYear, this.state.endYear).then((response) => {
 	// 		console.log(response.data)
 	// 		this.setState({articles: response.data.response.docs})
 	// 	}.bind(this))
 	// 	console.log(this.state.articles)
 	// }
 	handleOverallButtonClick() {
-		this.overall()
+		axios.get("/overall/male/open").then((response) => {
+		this.setState({omData: response.data})
+		})
+
+		axios.get("/overall/male/closed").then((response) => {
+		this.setState({cmData: response.data})
+		})
+
+		axios.get("/overall/female/open").then((response) => {
+		this.setState({ofData: resonse.data})
+		})
+
+		axios.get("/overall/female/closed").then((response) => {
+		this.setState({cfData: response.data})
+		})
 	}
 
 	handleSuperficialButtonClick(){
-		this.super()
+		axios.get("/supinfec/male/open").then((response) => {
+		this.setState({omData: response.data})
+		})
+
+		axios.get("/supinfec/male/closed").then((response) => {
+		this.setState({cmData: response.data})
+		})
+
+		axios.get("/supinfec/female/open").then((response) => {
+		this.setState({ofData: resonse.data})
+		})
+
+		axios.get("/supinfec/female/closed").then((response) => {
+		this.setState({cfData: response.data})
+		})
 	}
 
 	handleDeepButtonClick(){
-		this.deep()
+		
+		axios.get("/wndinfd/male/open").then((response) => {
+		this.setState({omData: response.data})
+		})
+
+		axios.get("/wndinfd/male/closed").then((response) => {
+		this.setState({cmData: response.data})
+		})
+
+		axios.get("/wndinfd/female/open").then((response) => {
+		this.setState({ofData: resonse.data})
+		})
+
+		axios.get("/wndinfd/female/closed").then((response) => {
+		this.setState({cfData: response.data})
+		})
 	}
 
 	handleWoundButtonClick(){
-		this.wound()
+		
+		axios.get("/dehis/male/open").then((response) => {
+		this.setState({omData: response.data})
+		})
+
+		axios.get("/dehis/male/closed").then((response) => {
+		this.setState({cmData: response.data})
+		})
+
+		axios.get("/dehis/female/open").then((response) => {
+		this.setState({ofData: resonse.data})
+		})
+
+		axios.get("/dehis/female/closed").then((response) => {
+		this.setState({cfData: response.data})
+		})
 	}
 
 	handleTransfusionButtonClick(){
-		this.trans()
+		
+		axios.get("/othbleed/male/open").then((response) => {
+		this.setState({omData: response.data})
+		})
+
+		axios.get("/othbleed/male/closed").then((response) => {
+		this.setState({cmData: response.data})
+		})
+
+		axios.get("/othbleed/female/open").then((response) => {
+		this.setState({ofData: resonse.data})
+		})
+
+		axios.get("/othbleed/female/closed").then((response) => {
+		this.setState({cfData: response.data})
+		})
+
 	}
 
 	handleReadButtonClick(){
-		this.read()
+	
+		axios.get("/readmission/male/open").then((response) => {
+		this.setState({omData: response.data})
+		})
+
+		axios.get("/readmission/male/closed").then((response) => {
+		this.setState({cmData: response.data})
+		})
+
+		axios.get("/readmission/female/open").then((response) => {
+		this.setState({ofData: resonse.data})
+		})
+
+		axios.get("/readmission/female/closed").then((response) => {
+		this.setState({cfData: response.data})
+		})
 	}
 
-	ReopButtonClick(){
-		this.reop()
+	handleReopButtonClick(){
+		
+		axios.get("/returnor/male/open").then((response) => {
+		this.setState({omData: response.data})
+		})
+
+		axios.get("/returnor/male/closed").then((response) => {
+		this.setState({cmData: response.data})
+		})
+
+		axios.get("/returnor/female/open").then((response) => {
+		this.setState({ofData: resonse.data})
+		})
+
+		axios.get("/returnor/female/closed").then((response) => {
+		this.setState({cfData: response.data})
+		})
 	}
-	
 	render() {
 		return (
 			<div className="container-fluid">
@@ -111,7 +225,7 @@ class Homepage extends React.Component {
 						</div>
 						<div id="searchReopDiv">
 							<button
-								onClick={this.ReopButtonClick}
+								onClick={this.handleReopButtonClick}
 								className="btn btn-default pull-left"
 							>
 								Reoperation
@@ -123,36 +237,12 @@ class Homepage extends React.Component {
 					<div className="row">
 						<div className="col-md-6">
 							<OpenMale
-							overall = {this.handleOverallButtonClick()}
-
-							superficial={this.handleSuperficialButtonClick()}
-
-							deep= {this.handleDeepButtonClick()}
-
-							wound= {this.handleWoundButtonClick()}
-							
-							trans= {this.handleTransfusionButtonClick()}
-
-							read= {this.handleReadButtonClick()}
-
-							reop = {this.ReopButtonClick()}
+							data={this.state.omData}
 							/>
 						</div>
 						<div className="col-md-6">
 							<OpenFemale
-							overall = {this.handleOverallButtonClick()}
-
-							superficial={this.handleSuperficialButtonClick()}
-
-							deep= {this.handleDeepButtonClick()}
-
-							wound= {this.handleWoundButtonClick()}
-							
-							trans= {this.handleTransfusionButtonClick()}
-
-							read= {this.handleReadButtonClick()}
-
-							reop = {this.ReopButtonClick()}
+							data={this.state.ofData}
 							/>
 						</div>
 					</div>
@@ -161,36 +251,12 @@ class Homepage extends React.Component {
 					<div className="row">
 						<div className="col-md-6">
 							<ClosedMale
-							overall = {this.handleOverallButtonClick()}
-
-							superficial={this.handleSuperficialButtonClick()}
-
-							deep= {this.handleDeepButtonClick()}
-
-							wound= {this.handleWoundButtonClick()}
-							
-							trans= {this.handleTransfusionButtonClick()}
-
-							read= {this.handleReadButtonClick()}
-
-							reop = {this.ReopButtonClick()}
+							data={this.state.cmData}
 							/>
 						</div>
 						<div className="col-md-6">
 							<ClosedFemale
-							overall = {this.handleOverallButtonClick()}
-
-							superficial={this.handleSuperficialButtonClick()}
-
-							deep= {this.handleDeepButtonClick()}
-
-							wound= {this.handleWoundButtonClick()}
-							
-							trans= {this.handleTransfusionButtonClick()}
-
-							read= {this.handleReadButtonClick()}
-
-							reop = {this.ReopButtonClick()}
+							data={this.state.cfData}
 							/>
 						</div>
 					</div>

@@ -15,42 +15,15 @@ var lineData = [
     ];
 
 class ClosedFemale extends React.Component{
-  overall(){
-    axios.get("/overall/female/closed")
-  }
-
-  othbleed(){
-    axios.get("/othbleed/female/closed")
-  }
-
-
-  super(){
-    axios.get("/supinfec/female/closed")
-
-  }
-
-  wound(){
-    axios.get("/woundinfd/female/closed")
-
+  constructor(props){
+    super(props);
   }
   
-  trans(){
-    axios.get("/dehis/female/closed")
+  componentWillReceiveProps() {}
 
-  }
-
-  reop(){
-    axios.get("/returnor/female/closed")
-
-  }
-
-read(){
-    axios.get"/readmission/female/closed")
-
-  }
   render() {
     return  (
-      <div>
+      <div className="line-graph">
     	<LineChart
         legend={true}
         data={lineData}

@@ -22,46 +22,15 @@ var lineData = [
     ];
 
 class OpenMale extends React.Component{
-  componentDidMount(){
-    data = axios.get({this.props.button})
-  }
-  overall(){
-    axios.get("/overall/male/open")
-  }
-
-  othbleed(){
-    axios.get("/othbleed/male/open")
-  }
-
-
-  super(){
-    axios.get("/supinfec/male/open")
-
-  }
-
-  wound(){
-    axios.get("/woundinfd/male/open")
-
+  constructor(props){
+    super(props);
   }
   
-  trans(){
-    axios.get("/dehis/male/open")
-
-  }
-
-  reop(){
-    axios.get("/returnor/male/open")
-
-  }
-
-read(){
-    axios.get"/readmission/male/open")
-
-  }
+  componentWillReceiveProps() {}
   
   render() {
     return  (
-      <div>
+      <div className="line-graph">
       <LineChart
         legend={true}
         data={lineData}
