@@ -12,13 +12,18 @@ class Main extends React.Component {
 			<div className="container">
 				<div className="row">
 					<div className="jumbotron">
-						<h1>Medical Bot Stuff</h1>
+						<h1>GAAP Medical Data Analysis</h1>
 					</div>
-			<div className="container-fluid">
-				{this.props.children}
+					<div className="container-fluid">
+						{this.props.children}
+					</div>
+				</div>
+			<div className="navbar navbar-default navbar-fixed-bottom" id="footer">
+				<div className="container-fluid">
+					<p className="text-muted text-center footer">&copy; Copyright 2017 GAAP Medical</p>
+				</div>
 			</div>
-		</div>
-	</div>
+			</div>
 		);
 	}
 
