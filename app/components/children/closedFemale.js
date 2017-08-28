@@ -16,12 +16,13 @@ var lineData = [
 
 class ClosedFemale extends React.Component{
   
-  componentDidMount(){
-    this.props.overall().cf
- }
+  componentWillReceiveProps() {
+  
+  }
+
   render() {
     return  (
-      <div>
+      <div className="line-graph">
     	<LineChart
         legend={true}
         data={lineData}

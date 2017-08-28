@@ -15,13 +15,13 @@ var lineData = [
     ];
 
 class OpenFemale extends React.Component{
-  onentDidMount(){
-    this.props.overall().of
+  componentWillReceiveProps() {
+  
   }
 
   render() {
     return  (
-      <div>
+      <div className="line-graph">
       <LineChart
         legend={true}
         data={lineData}
