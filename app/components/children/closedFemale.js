@@ -4,7 +4,6 @@ import rd3 from 'rd3';
 import axios from 'axios';
 
 const LineChart = rd3.LineChart;
-
 var lineData = [
       { 
         name: 'series1',
@@ -19,7 +18,22 @@ class ClosedFemale extends React.Component{
     super(props);
   }
   
-  componentWillReceiveProps() {}
+  componentWillReceiveProps() {
+    if (this.props.selector === "othbleed") {
+      for (var i = 18; i < 90; i++) {
+        var numAge = this.props.data.reduce((n, person) => {
+          return n + (person.age == i);
+        }, 0);
+        lineData =[
+            { 
+              name: 'Closed Female othbleed',
+              values: { x: i, y: numAge },
+              strokeWidth: 3,
+              strokeDashArray: "5,5"
+            }];
+        }
+      }
+  }
 
   render() {
     return  (
