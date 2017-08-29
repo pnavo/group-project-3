@@ -11,7 +11,7 @@ class Main extends React.Component {
 		return (
 			<div className="container">
 				<div className="row">
-					<div className="jumbotron">
+					<div className="jumbotron text-center">
 						<h1>GAAP Medical Data Analysis</h1>
 					</div>
 					<div className="container-fluid">
