@@ -81,7 +81,7 @@ var radiusSchema = new Schema({
   anesthes: {
     type: Number
   },
-  returnor: {
+  reoperation: {
     type: Number
   },
   readmission: {
